@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.foodapp">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".All.Activitys.Notification"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".All.Activitys.LaunchPage"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".All.Activitys.PersonalDetails"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".All.Activitys.Splash"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".All.Activitys.SignInActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".All.Activitys.MainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".All.Activitys.SignUpActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".All.Activitys.Questionnaire1"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".All.Activitys.Questionnaire2"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".All.Activitys.Questionnaire3"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".All.Activitys.Questionnaire4"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".All.Activitys.Questionnaire5"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".All.Activitys.Questionnaire6"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".All.Activitys.Questionnaire7"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".All.Activitys.Questionnaire8"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".All.Activitys.Questionnaire9"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+    </application>
+
+</manifest>

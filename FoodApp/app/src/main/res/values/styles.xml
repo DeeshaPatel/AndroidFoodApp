@@ -1,0 +1,121 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Theme.MyApp" parent="Theme.MaterialComponents.DayNight">
+    </style>
+
+    <style name="MyProgressBarTwo" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="colorButtonNormal">#fcc2d8</item>
+        <item name="colorControlActivated">#fbe383</item>
+        <item name="colorControlHighlight">#a2e4d8</item>
+        <item name="android:startColor">#fbe383</item>
+        <item name="android:endColor">#a2e4d8</item>
+        <item name="android:gradientRadius">10dp</item>
+        <item name="android:progressDrawable">@drawable/backgroundprogress</item>
+        <item name="android:minWidth">300dp</item>
+    </style>
+
+    <style name="mySpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/colorblack</item>
+        <item name="colorBackgroundFloating">@color/white</item>
+    </style>
+
+    <style name="RadioChecked" parent="AppTheme">
+        <item name="colorControlNormal">@color/colorblack</item>
+        <item name="colorAccent">@color/green</item>
+        <item name="android:textColorSecondary">@color/colorblack</item>
+    </style>
+
+    <style name="MyDatePickerStyle" parent="@android:style/Widget.Material.DatePicker">
+        <item name="android:colorControlActivated">@color/yellow</item>
+        <item name="android:datePickerMode">spinner</item>
+        <item name="android:textColorPrimary">#000000</item>
+        <item name="android:textColor">@color/colorblack</item>
+        <item name="android:calendarViewShown">false</item>
+    </style>
+
+    <style name="MyDatePickerSpinnerStyle" parent="@android:style/Widget.Material.DatePicker">
+        <item name="android:datePickerMode">spinner</item>
+        <item name="android:calendarViewShown">false</item>
+        <item name="android:textColorPrimary">#000000</item>
+        <item name="android:textColor">@color/colorblack</item>
+        <item name="colorControlNormal">@color/colorblack</item>
+    </style>
+
+    <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">9.5dp</item>
+        <item name="fontFamily">@font/opensansbold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="MineCustomTabText_profile" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">10.5dp</item>
+        <item name="fontFamily">@font/opensansbold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="Widget.MyApp.BottomSheet.Modal" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="behavior_skipCollapsed">true</item>
+        <item name="behavior_fitToContents">true</item>
+        <item name="behavior_peekHeight">1000dp</item>
+        <item name="behavior_hideable">true</item>
+    </style>
+
+    <style name="CircularDeterminateProgressBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/circulartabdecor</item>
+    </style>
+
+    <style name="CircularDeterminateProgressBar1">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/circulartabdecorgrey</item>
+    </style>
+
+    <style name="CircularDeterminateProgressBar2">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/circulartabdecorpink</item>
+    </style>
+
+    <style name="CircularDeterminateProgressBar3">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/circulartabyello</item>
+    </style>
+
+    <style name="horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progressgredient</item>
+    </style>
+
+    <style name="MySeekBar" parent="Widget.AppCompat.SeekBar">
+        <item name="android:progressBackgroundTint">@color/green</item>
+        <item name="android:progressTint">#388e3c</item>
+        <item name="android:colorControlActivated">@color/green</item>
+    </style>
+
+    <style name="CustomCheckbox02" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/check_box_selecter</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="CustomCalender">
+        <item name="fontFamily">@font/opensanssemibold</item>
+        <item name="android:dateTextAppearance">@style/CustomCalender_helper</item>
+    </style>
+
+    <style name="CustomCalender_helper">
+        <item name="fontFamily">@font/opensanssemibold</item>
+        <item name="android:textSize">10dp</item>
+    </style>
+
+
+
+
+</resources>

@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".All.Fragment.PersonalDetailsFragment">
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <ImageView
+            android:id="@+id/ivback"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/bac" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/opensansbold"
+            android:text="Questionnaire"
+            android:textColor="@color/edittext"
+            android:textSize="15dp" />
+
+
+        <ImageView
+            android:id="@+id/ivNotification"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/notification1" />
+
+
+    </RelativeLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="#a2e4d8"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="5dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="90dp"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginRight="10dp">
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+
+                                    <TextView
+                                        android:id="@+id/tvCount"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="06"
+                                        android:fontFamily="@font/opensansbold"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="22dp" />
+
+                                    <View
+                                        android:layout_width="25dp"
+                                        android:layout_height="2dp"
+                                        android:background="@android:color/black" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/opensanssemibold"
+                                    android:text="Of"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/opensanssemibold"
+                                    android:text="09"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="15dp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/opensanssemibold"
+                                android:text="SUPPLEMENTS"
+                                android:textColor="@android:color/black"
+                                android:textSize="12dp" />
+
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="50dp"
+
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/opensanssemibold"
+                                    android:text="Do you take any supplements? If so, what is the dose / frequency?"
+                                    android:textColor="@color/edittext"
+                                    android:textSize="15dp" />
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="15dp"
+                                    android:background="@drawable/edittextview1_back">
+
+
+                                    <EditText
+                                        android:id="@+id/ed1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:background="@android:color/transparent"
+                                        android:fontFamily="@font/opensansbold"
+                                        android:hint="Type here"
+                                        android:textColor="@color/edittext"
+                                        android:textColorHint="#a2a3a6"
+                                        android:textSize="13dp" />
+
+
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/opensanssemibold"
+                                    android:text="Do you use protein powder? If so, please advise the brand, flavour so we can include this in your plan"
+                                    android:textColor="@color/edittext"
+                                    android:textSize="15dp" />
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="15dp"
+                                    android:background="@drawable/edittextview1_back">
+
+
+                                    <EditText
+                                        android:id="@+id/ed2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:background="@android:color/transparent"
+                                        android:fontFamily="@font/opensansbold"
+                                        android:hint="Type here"
+                                        android:textColor="@color/edittext"
+                                        android:textColorHint="#a2a3a6"
+                                        android:textSize="13dp" />
+
+
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/opensanssemibold"
+                                    android:text="Rate your digestive health (1-10). Do you struggle with any issues here such as loose stool, constipation, bloating, flatulence etc?"
+                                    android:textColor="@color/edittext"
+                                    android:textSize="15dp" />
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="15dp"
+                                    android:background="@drawable/edittextview1_back">
+
+
+                                    <EditText
+                                        android:id="@+id/ed3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:background="@android:color/transparent"
+                                        android:fontFamily="@font/opensansbold"
+                                        android:hint="Type here"
+                                        android:textColor="@color/edittext"
+                                        android:textColorHint="#a2a3a6"
+                                        android:textSize="13dp" />
+
+
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/opensanssemibold"
+                                    android:text="What foods and meals do you like?"
+                                    android:textColor="@color/edittext"
+                                    android:textSize="15dp" />
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="15dp"
+                                    android:background="@drawable/edittextview1_back">
+
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:background="@android:color/transparent"
+                                        android:fontFamily="@font/opensanssemibold"
+                                        android:hint="Type here"
+                                        android:textColor="@color/edittext"
+                                        android:textColorHint="#a2a3a6"
+                                        android:textSize="13dp" />
+
+
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/opensanssemibold"
+                                    android:text="What foods/ meals would you like to be in your first meal plan?"
+                                    android:textColor="@color/edittext"
+                                    android:textSize="15dp" />
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="15dp"
+                                    android:background="@drawable/edittextview1_back">
+
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:background="@android:color/transparent"
+                                        android:fontFamily="@font/opensanssemibold"
+                                        android:hint="Type here"
+                                        android:textColor="@color/edittext"
+                                        android:textColorHint="#a2a3a6"
+                                        android:textSize="13dp" />
+
+
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/opensanssemibold"
+                                    android:text="Please record your daily food and fluid intake over a typical day. This includes EVERYTHING that you consume and state the serving size if known."
+                                    android:textColor="@color/edittext"
+                                    android:textSize="15dp" />
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="15dp"
+                                    android:background="@drawable/edittextview1_back">
+
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:background="@android:color/transparent"
+                                        android:fontFamily="@font/opensanssemibold"
+                                        android:hint="Meal 1"
+                                        android:textColor="@color/edittext"
+                                        android:textColorHint="#a2a3a6"
+                                        android:textSize="13dp" />
+
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="15dp"
+                                    android:background="@drawable/edittextview1_back">
+
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:background="@android:color/transparent"
+                                        android:fontFamily="@font/opensanssemibold"
+                                        android:hint="Meal 2"
+                                        android:textColor="@color/edittext"
+                                        android:textColorHint="#a2a3a6"
+                                        android:textSize="13dp" />
+
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="15dp"
+                                    android:background="@drawable/edittextview1_back">
+
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:background="@android:color/transparent"
+                                        android:fontFamily="@font/opensanssemibold"
+                                        android:hint="Meal 3"
+                                        android:textColor="@color/edittext"
+                                        android:textColorHint="#a2a3a6"
+                                        android:textSize="13dp" />
+
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="15dp"
+                                    android:background="@drawable/edittextview1_back">
+
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:background="@android:color/transparent"
+                                        android:fontFamily="@font/opensanssemibold"
+                                        android:hint="Meal 4"
+                                        android:textColor="@color/edittext"
+                                        android:textColorHint="#a2a3a6"
+                                        android:textSize="13dp" />
+
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="15dp"
+                                    android:background="@drawable/edittextview1_back">
+
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:background="@android:color/transparent"
+                                        android:fontFamily="@font/opensanssemibold"
+                                        android:hint="Meal 5"
+                                        android:textColor="@color/edittext"
+                                        android:textColorHint="#a2a3a6"
+                                        android:textSize="13dp" />
+
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="15dp"
+                                    android:background="@drawable/edittextview1_back">
+
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:background="@android:color/transparent"
+                                        android:fontFamily="@font/opensanssemibold"
+                                        android:hint="Meal 6"
+                                        android:textColor="@color/edittext"
+                                        android:textColorHint="#a2a3a6"
+                                        android:textSize="13dp" />
+
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginRight="10dp"
+                        app:cardBackgroundColor="@color/yellow"
+                        app:cardCornerRadius="10dp">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rlSkip"
+                            android:text="Skip"
+                            android:textAllCaps="false"
+                            android:background="@color/colorblack"
+                            android:fontFamily="@font/opensanssemibold"
+                            android:textColor="@android:color/white"
+                            android:textSize="13dp" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="10dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="10dp">
+
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Next"
+                            android:textAllCaps="false"
+                            android:background="@color/white"
+                            android:fontFamily="@font/opensanssemibold"
+                            android:textColor="@color/edittext"
+                            android:textSize="13dp"
+                            android:id="@+id/rlNext"
+                            />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

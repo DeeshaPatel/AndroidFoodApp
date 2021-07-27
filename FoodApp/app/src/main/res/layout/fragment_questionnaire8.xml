@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".All.Fragment.PersonalDetailsFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <ImageView
+            android:id="@+id/ivback"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/bac" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/opensansbold"
+            android:text="Questionnaire"
+            android:textColor="@color/edittext"
+            android:textSize="15dp" />
+
+
+        <ImageView
+            android:id="@+id/ivNotification"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/notification1" />
+
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="#a2e4d8"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="5dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginRight="10dp">
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+
+                                    <TextView
+                                        android:id="@+id/tvCount"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="08"
+                                        android:fontFamily="@font/opensansbold"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="22dp" />
+
+                                    <View
+                                        android:layout_width="26dp"
+                                        android:layout_height="2dp"
+                                        android:background="@android:color/black" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/opensanssemibold"
+                                    android:text="Of"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/opensanssemibold"
+                                    android:text="09"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="15dp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/opensansregular"
+                                android:text=""
+                                android:textColor="@android:color/black"
+                                android:textSize="12dp" />
+
+                        </RelativeLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="100dp"
+                                android:orientation="vertical">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="50dp"
+                                    android:orientation="vertical">
+
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:fontFamily="@font/opensansbold"
+                                        android:text="Dairy/ Milk Type (SELECT YOUR DISLIKES)"
+                                        android:textColor="@color/edittext"
+                                        android:textSize="15dp" />
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        >
+
+
+                                        <androidx.recyclerview.widget.RecyclerView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:padding="10dp"
+                                            android:id="@+id/rvdairy_milk_type"/>
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:fontFamily="@font/opensanssemibold"
+                                        android:text="Do you consume any of the below beverages ?"
+                                        android:textColor="#000000"
+                                        android:textSize="15dp" />
+
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        >
+
+
+                                        <androidx.recyclerview.widget.RecyclerView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:padding="10dp"
+                                            android:id="@+id/rvFruits"/>
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:layout_marginTop="20dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:fontFamily="@font/opensansbold"
+                                        android:text="Size"
+                                        android:textColor="@color/edittext"
+                                        android:textSize="15dp" />
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        >
+
+
+                                        <androidx.recyclerview.widget.RecyclerView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:padding="10dp"
+                                            android:id="@+id/rvProtein"/>
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:fontFamily="@font/opensansbold"
+                                        android:text="Milk Type"
+                                        android:textColor="@color/edittext"
+                                        android:textSize="15dp" />
+
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        >
+
+
+                                        <androidx.recyclerview.widget.RecyclerView
+                                            android:layout_width="match_parent"
+                                            android:padding="12dp"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/rvGrains"/>
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginTop="15dp">
+
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:fontFamily="@font/opensanssemibold"
+                                        android:text="Do you consume sugar in this beverage? If so please advise how many"
+                                        android:textColor="@color/edittext"
+                                        android:textSize="15dp" />
+
+
+                                    <LinearLayout
+                                        android:layout_marginTop="10dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_gravity="center_vertical"
+                                        android:gravity="center_vertical">
+
+
+                                        <RadioGroup
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:id="@+id/rgyes1">
+
+
+                                            <RadioButton
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Yes"
+                                                android:buttonTint="@color/colorblack"
+                                                android:fontFamily="@font/opensanssemibold"
+                                                android:textColor="@color/edittext"
+                                                android:textSize="13dp"/>
+
+                                            <RadioButton
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="No"
+                                                android:buttonTint="@color/colorblack"
+                                                android:fontFamily="@font/opensanssemibold"
+                                                android:textColor="@color/edittext"
+                                                android:textSize="13dp"/>
+
+                                        </RadioGroup>
+
+
+                                        <RelativeLayout
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_width="150dp"
+                                            android:layout_height="40dp"
+                                            android:background="@drawable/edittextview_back">
+
+                                            <Spinner
+                                                android:paddingLeft="20dp"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:theme="@style/mySpinnerItemStyle"
+                                                android:entries="@array/onetofive"/>
+
+                                            <ImageView
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:layout_centerVertical="true"
+                                                android:layout_alignParentEnd="true"
+                                                android:src="@drawable/ic_baseline_arrow_drop_down_24"/>
+
+
+                                        </RelativeLayout>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginTop="15dp">
+
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:fontFamily="@font/opensanssemibold"
+                                        android:text="Do you want this beverage included daily?"
+                                        android:textColor="@color/edittext"
+                                        android:textSize="15dp" />
+
+
+                                    <LinearLayout
+                                        android:layout_marginTop="10dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_gravity="center_vertical"
+                                        android:gravity="center_vertical">
+
+
+                                        <RadioGroup
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:id="@+id/rgyes">
+
+
+                                            <RadioButton
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Yes"
+                                                android:buttonTint="@color/colorblack"
+                                                android:fontFamily="@font/opensanssemibold"
+                                                android:textColor="@color/edittext"
+                                                android:textSize="13dp"/>
+
+                                            <RadioButton
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="No"
+                                                android:buttonTint="@color/colorblack"
+                                                android:fontFamily="@font/opensanssemibold"
+                                                android:textColor="@color/edittext"
+                                                android:textSize="13dp"/>
+
+                                        </RadioGroup>
+
+
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <!--<LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="30dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:fontFamily="@font/opensanssemibold"
+                                        android:text="Do you know you average daily steps over the last 7-28 days? Is this normal for you?"
+                                        android:textColor="@color/edittext"
+                                        android:textSize="15dp" />
+
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:layout_marginTop="15dp"
+                                        android:background="@drawable/edittextview1_back">
+
+
+                                        <EditText
+                                            android:id="@+id/ed2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginRight="10dp"
+                                            android:background="@android:color/transparent"
+                                            android:fontFamily="@font/opensanssemibold"
+                                            android:hint="Type here"
+                                            android:textColor="@color/edittext"
+                                            android:textColorHint="#a2a3a6"
+                                            android:textSize="13dp" />
+
+
+                                    </RelativeLayout>
+                                </LinearLayout>-->
+
+                                <!--ButtonClick-->
+
+
+                            </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginRight="10dp"
+                        app:cardBackgroundColor="@color/yellow"
+                        app:cardCornerRadius="10dp">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rlSkip"
+                            android:text="Skip"
+                            android:textAllCaps="false"
+                            android:background="@color/colorblack"
+                            android:fontFamily="@font/opensanssemibold"
+                            android:textColor="@android:color/white"
+                            android:textSize="13dp" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="10dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="10dp">
+
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Next"
+                            android:textAllCaps="false"
+                            android:background="@color/white"
+                            android:fontFamily="@font/opensanssemibold"
+                            android:textColor="@color/edittext"
+                            android:textSize="13dp"
+                            android:id="@+id/rlNext"
+                            />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</LinearLayout>

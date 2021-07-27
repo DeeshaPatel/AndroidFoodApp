@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:elevation="0dp"
+        app:cardElevation="0dp"
+        android:background="@color/grey"
+        app:cardBackgroundColor="#ffffff"
+        android:id="@+id/add_meals"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:padding="4dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"
+                android:id="@+id/image_chat_page_dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/original_message_send"
+                android:text="sdfdghgjhklj;"
+                android:textSize="14dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:layout_marginRight="60dp"
+                android:textColor="@color/colorblack"
+                android:fontFamily="@font/opensansregular"
+                android:background="@drawable/message_send_background"
+                />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:id="@+id/time_of_message_send"
+                android:text="12:50"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:textSize="10dp"
+                android:gravity="right|center"
+                android:fontFamily="@font/openaanslight"
+                android:textColor="@color/colorhite"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>

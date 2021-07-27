@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fbe383"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/food_and_beverage_food_likes"
+                android:layout_marginRight="5dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                    android:padding="7dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Food Likes:"
+                    android:textSize="13dp"
+                    android:textColor="@color/colorblack"
+                    android:fontFamily="@font/opensanssemibold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorblack"
+                    android:textSize="13dp"
+                    android:text="Beef, Chicken, Turkey, Pork, ..."
+                    android:fontFamily="@font/opensanssemibold"/>
+
+            </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                android:padding="5dp"
+                android:id="@+id/food_and_beverage_food_dislikes"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="7dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Food Dislikes:"
+                        android:textSize="13dp"
+                        android:textColor="@color/colorblack"
+                        android:fontFamily="@font/opensanssemibold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorblack"
+                        android:textSize="13dp"
+                        android:text="Beef, Chicken, Turkey, Pork, ..."
+                        android:fontFamily="@font/opensanssemibold"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/food_and_beverage_beverage_likes"
+                android:layout_marginRight="5dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="7dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13dp"
+                        android:text="Beverage Likes:"
+                        android:textColor="@color/colorblack"
+                        android:fontFamily="@font/opensanssemibold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:textSize="13dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorblack"
+                        android:text="Beef, Chicken, Turkey, Pork, ..."
+                        android:fontFamily="@font/opensanssemibold"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                android:padding="5dp"
+                android:id="@+id/food_and_beverage_beverage_dislikes"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="7dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Beverage Dislikes:"
+                        android:textSize="13dp"
+                        android:textColor="@color/colorblack"
+                        android:fontFamily="@font/opensanssemibold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:textSize="13dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorblack"
+                        android:text="Beef, Chicken, Turkey, Pork, ..."
+                        android:fontFamily="@font/opensanssemibold"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/food_and_beverage_daily_dislikes"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="7dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textSize="13dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorblack"
+                    android:text="Dairy/ Milk Alternatives Dislikes:"
+                    android:fontFamily="@font/opensanssemibold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Beef, Chicken, Turkey, Pork, ..."
+                    android:textSize="13dp"
+                    android:textColor="@color/colorblack"
+                    android:fontFamily="@font/opensanssemibold"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/food_and_beverage_medical_condition"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="7dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/colorblack"
+                    android:text="Medical Conditions, Food Allergies/Intolerances"
+                    android:fontFamily="@font/opensanssemibold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/colorblack"
+                    android:text="Beef, Chicken, Turkey, Pork, ..."
+                    android:fontFamily="@font/opensanssemibold"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</LinearLayout>

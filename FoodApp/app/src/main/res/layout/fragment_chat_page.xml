@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".All.Fragment.ChatPage">
+
+    <LinearLayout android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@drawable/background1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/back"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:id="@+id/personal_details_back_button"/>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:elevation="12dp"
+                android:id="@+id/card_list_person_profile"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="@color/green"
+                app:cardCornerRadius="250dp"
+                android:shape="ring"
+                android:thicknessRatio="6">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:src="@drawable/face2"
+                android:id="@+id/image_chat_page_dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:id="@+id/txt_user_name"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                android:text="Chat"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/notification"
+                android:layout_weight="1"
+                android:id="@+id/personal_details_notification"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/two_side_rounded_rectangle"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="25dp"
+                android:id="@+id/rcv_chat_message"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:layout_gravity="bottom"
+                android:layout_margin="20dp"
+                android:background="@drawable/chatmessage"
+                android:gravity="bottom"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:textSize="14dp"
+                        android:textColor="@color/colorhite"
+                        android:layout_marginLeft="20dp"
+                        android:textColorHint="@color/colorhite"
+                        android:layout_marginRight="60dp"
+                        android:background="@android:color/transparent"
+                        android:hint="Type your message..."
+                        android:layout_gravity="center"
+                        />
+
+                    <RelativeLayout
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                        android:gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                    >
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/round"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/send"/>
+
+                </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorhite">#616161</color>
+    <color name="colorblack">#000000</color>
+    <color name="edittext">#000000</color>
+
+    <color name="yellow">#fbe383</color>
+    <color name="green">#a2e4d8</color>
+    <color name="pink">#fcc2d8</color>
+    <color name="grey">#ECECEC</color>
+    <color name="white">#ffffff</color>
+    <color name="light_grey">#F8F8F8</color>
+    <color name="dark_grey">#DDDDDD</color>
+
+    <color name="light_white">#FAFFFFFF</color>
+
+    <color name="tab_color">#F1F3FB</color>
+
+    <color name="chat_dark_green">#A2E4D8</color>
+    <color name="chat_purple">#C3C1E3</color>
+    <color name="chat_pink">#F5C9D0</color>
+    <color name="chat_blue">#B6E7F6</color>
+    <color name="chat_yello">#FBE6AE</color>
+    <color name="chat_light_green">#CDEDA5</color>
+
+
+</resources>

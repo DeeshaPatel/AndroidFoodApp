@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    tools:context=".All.Fragment.CheckIn.MeasurementsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="@color/tab_color"
+                app:cardCornerRadius="10dp">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/colorblack"
+                    android:background="@color/tab_color"
+                    android:paddingTop="10dp"
+                    app:counterTextColor="@color/colorblack"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/opensanssemibold"
+                        android:hint="Weight(kg)"
+                        android:layout_marginLeft="20dp"
+                        android:ems="10"
+                        android:layout_marginTop="30dp"
+                        android:textColor="@color/edittext"
+                        android:textColorHint="@color/edittext"
+                        android:textSize="15dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/tab_color"
+                app:cardCornerRadius="10dp">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/colorblack"
+                    android:background="@color/tab_color"
+                    android:paddingTop="10dp"
+                    app:counterTextColor="@color/colorblack"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/opensanssemibold"
+                        android:hint="Arm"
+                        android:layout_marginLeft="20dp"
+                        android:ems="10"
+                        android:layout_marginTop="30dp"
+                        android:textColor="@color/edittext"
+                        android:textColorHint="@color/edittext"
+                        android:textSize="15dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/tab_color"
+                app:cardCornerRadius="10dp">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/colorblack"
+                    android:background="@color/tab_color"
+                    android:paddingTop="10dp"
+                    app:counterTextColor="@color/colorblack"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/opensanssemibold"
+                        android:hint="Chest"
+                        android:layout_marginLeft="20dp"
+                        android:ems="10"
+                        android:layout_marginTop="30dp"
+                        android:textColor="@color/edittext"
+                        android:textColorHint="@color/edittext"
+                        android:textSize="15dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/tab_color"
+                app:cardCornerRadius="10dp">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/colorblack"
+                    android:background="@color/tab_color"
+                    android:paddingTop="10dp"
+                    app:counterTextColor="@color/colorblack"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/opensanssemibold"
+                        android:hint="Waist"
+                        android:layout_marginLeft="20dp"
+                        android:ems="10"
+                        android:layout_marginTop="30dp"
+                        android:textColor="@color/edittext"
+                        android:textColorHint="@color/edittext"
+                        android:textSize="15dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/tab_color"
+                app:cardCornerRadius="10dp">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/colorblack"
+                    android:background="@color/tab_color"
+                    android:paddingTop="10dp"
+                    app:counterTextColor="@color/colorblack"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/opensanssemibold"
+                        android:hint="Hip"
+                        android:layout_marginLeft="20dp"
+                        android:ems="10"
+                        android:layout_marginTop="30dp"
+                        android:textColor="@color/edittext"
+                        android:textColorHint="@color/edittext"
+                        android:textSize="15dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/tab_color"
+                app:cardCornerRadius="10dp">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/colorblack"
+                    android:background="@color/tab_color"
+                    android:paddingTop="10dp"
+                    app:counterTextColor="@color/colorblack"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/opensanssemibold"
+                        android:hint="Thigh"
+                        android:layout_marginLeft="20dp"
+                        android:ems="10"
+                        android:layout_marginTop="30dp"
+                        android:textColor="@color/edittext"
+                        android:textColorHint="@color/edittext"
+                        android:textSize="15dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SAVE"
+                    android:textColor="@color/colorblack"
+                    android:background="@color/yellow"
+                    />
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
