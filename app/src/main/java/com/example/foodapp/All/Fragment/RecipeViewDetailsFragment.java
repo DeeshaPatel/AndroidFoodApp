@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.foodapp.All.Adapter.LibraryArticleAdapter;
 import com.example.foodapp.All.Adapter.MealPlanDetailsAdapter;
+import com.example.foodapp.All.Database.Service.RecipeDataDescriptionModel;
 import com.example.foodapp.All.Models.LibraryArticleModel;
 import com.example.foodapp.R;
 
@@ -23,6 +24,18 @@ public class RecipeViewDetailsFragment extends Fragment {
     RecyclerView ing,method;
     ArrayList<LibraryArticleModel> models,models1;
     TextView des;
+    ArrayList<RecipeDataDescriptionModel> dataDescriptionModels;
+    String s_description,carb,fat,fiber,protein;
+
+    public RecipeViewDetailsFragment(ArrayList<RecipeDataDescriptionModel> dataDescriptionModels, String s_description,String carb,String fat, String fiber ,String protein)
+    {
+        this.dataDescriptionModels = dataDescriptionModels;
+        this.s_description = s_description;
+        this.carb = carb;
+        this.fat = fat;
+        this.fiber = fiber;
+        this.protein = protein;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

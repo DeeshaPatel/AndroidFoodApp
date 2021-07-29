@@ -1,18 +1,16 @@
 package com.example.foodapp.All.Database.Service;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class MealPlanModel {
+public class RecipeDataModel {
 
     @SerializedName("Status")
     String status;
 
     @SerializedName("Data")
-    List<Data> data;
+    List<RecipeSubDataModel> data;
 
     public String getStatus() {
         return status;
@@ -22,11 +20,11 @@ public class MealPlanModel {
         this.status = status;
     }
 
-    public List<Data> getData() {
+    public List<RecipeSubDataModel> getData() {
         return data;
     }
 
-    public void setData(List<Data> data) {
+    public void setData(List<RecipeSubDataModel> data) {
         this.data = data;
     }
 

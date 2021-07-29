@@ -4,16 +4,8 @@ package com.example.foodapp.All.Database.Service;
 
 import com.example.foodapp.All.Models.LoginUser;
 
-import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import retrofit2.Call;
-import retrofit2.Callback;
 import retrofit2.http.Body;
-import retrofit2.http.Field;
-import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Headers;
@@ -29,6 +21,13 @@ public interface UserClient {
 
     @GET("/api/MealPlan/GetMealPlans")
     Call<MealPlanModel> getAllData(@Query("date") String date, @Query("PageNo") int pageno, @Query("PageSize") int pagesize, @Header("Authorization") String auth);
+
+
+    @GET("/api/Recipe/GetRecipeBycategory")
+    Call<RecipeDataModel> getAllRecipes(@Query("Id") String id, @Query("PageNo") int pageno, @Query("PageSize") int pagesize, @Header("Authorization") String auth);
+
+    @GET("/api/Category/GetCategories")
+    Call<RecipeCategoryDataModel> getRecipeCategories(@Header("Authorization") String auth);
 
 }
 

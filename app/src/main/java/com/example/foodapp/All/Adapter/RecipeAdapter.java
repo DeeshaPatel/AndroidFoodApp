@@ -1,6 +1,8 @@
 package com.example.foodapp.All.Adapter;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,19 +14,26 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.foodapp.All.Database.Service.RecipeDataModel;
+import com.example.foodapp.All.Database.Service.RecipeSubDataModel;
 import com.example.foodapp.All.Fragment.MealPlanFragment;
+import com.example.foodapp.All.Fragment.RecipeFragment;
 import com.example.foodapp.All.Fragment.RecipeViewDetailsFragment;
 import com.example.foodapp.All.Models.RecipeModel;
 import com.example.foodapp.R;
+import com.squareup.picasso.Picasso;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder>{
 
     Context context;
-    ArrayList<RecipeModel> recipeModels;
+    ArrayList<RecipeSubDataModel> recipeModels;
 
-    public RecipeAdapter(Context context,ArrayList<RecipeModel> recipeModels)
+    public RecipeAdapter(Context context,ArrayList<RecipeSubDataModel> recipeModels)
     {
         this.context = context;
         this.recipeModels = recipeModels;
@@ -38,19 +47,28 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecipeAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecipeAdapter.ViewHolder holder, final int position) {
 
-        RecipeModel recipeModel = recipeModels.get(position);
-        holder.cal.setText(recipeModel.getCal());
-        holder.mealname.setText(recipeModel.getName());
-        holder.image.setImageResource(recipeModel.getId());
+        holder.mealname.setText(recipeModels.get(position).getRecipeName());
+
+        Picasso.get().load(recipeModels.get(position).getImagePath()).placeholder(context.getResources().getDrawable(R.drawable.photo)).into(holder.image);
+
+//        try {
+//            URL url = new URL(recipeModels.get(position).getImagePath());
+//            Bitmap image = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+//            holder.image.setImageBitmap(image);
+//        } catch (MalformedURLException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
         holder.r_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AppCompatActivity activity = (AppCompatActivity) v.getContext();
-                RecipeViewDetailsFragment myFragment = new RecipeViewDetailsFragment();
+                RecipeViewDetailsFragment myFragment = new RecipeViewDetailsFragment(recipeModels.get(position).getIngredient(),recipeModels.get(position).getNotes(),recipeModels.get(position).getTotalCarb(),recipeModels.get(position).getTotalFat(),recipeModels.get(position).getTotalFiber(),recipeModels.get(position).getTotalProtein());
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, myFragment).addToBackStack(null).commit();
-
             }
         });
 

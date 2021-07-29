@@ -10,7 +10,7 @@
     android:background="@color/white"
     android:id="@+id/rl_view_recipe"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:padding="10dp">
+    android:padding="6dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,12 +21,13 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="30dp">
+                app:cardCornerRadius="20dp">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/img_view_recipe"
+                    android:src="@drawable/photo"
                     android:adjustViewBounds="true"
                     android:scaleType="fitXY"
                     />
@@ -38,9 +39,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/recipe_meal_name"
-                android:textSize="12dp"
+                android:textSize="16dp"
+                android:layout_margin="10dp"
                 android:textColor="@color/colorblack"
-                android:fontFamily="@font/opensansregular"/>
+                android:fontFamily="@font/opensanssemibold"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -52,6 +54,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/recipe_meal_cal"
                     android:textSize="10dp"
+                    android:layout_marginTop="10dp"
                     android:textColor="@color/colorblack"
                     android:fontFamily="@font/opensansregular"/>
 
@@ -60,6 +63,7 @@
                     android:layout_height="16dp"
                     android:textSize="12dp"
                     android:text="cal"
+                    android:visibility="gone"
                     android:textColor="@color/colorblack"
                     android:fontFamily="@font/opensansregular"/>
 

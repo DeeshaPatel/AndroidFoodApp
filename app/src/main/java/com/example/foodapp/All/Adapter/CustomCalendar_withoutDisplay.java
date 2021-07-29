@@ -88,10 +88,10 @@ public class CustomCalendar_withoutDisplay extends RecyclerView.Adapter<CustomCa
             holder.date.setBackgroundResource(R.drawable.round_selected_date_shape);
 
         }
-//        else if (current==position)
-//        {
-//            holder.date.setBackgroundResource(R.drawable.round_selected_date_shape_yello);
-//        }
+        else if (current==position)
+        {
+            holder.date.setBackgroundResource(R.drawable.round_selected_date_shape_yello);
+        }
         else
         {
             holder.date.setBackgroundResource(R.drawable.round_selected_date_shape_white);
