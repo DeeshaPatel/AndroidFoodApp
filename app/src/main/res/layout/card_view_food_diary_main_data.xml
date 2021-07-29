@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        app:cardElevation="0dp"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="#ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/linearlayout_expland_food_diary_data_title"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensanssemibold"
+                    android:text="Meal 1"
+                    android:id="@+id/rcv_txt_meal_name"
+                    android:textColor="#A2E4D8"
+                    android:textSize="22dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:id="@+id/rcv_txt_meal_cal"
+                    android:fontFamily="@font/opensansregular"
+                    android:gravity="bottom|right"
+                    android:text="275 cal"
+                    android:textColor="#A2E4D8"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:id="@+id/rcv_img_up_or_down"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginBottom="3dp"
+                    android:src="@drawable/upgreen"
+                    android:textColor="#A2E4D8" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="10dp"
+                android:background="#99D8CD" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/tab_color2"
+                android:visibility="gone"
+                android:id="@+id/linearlayout_expland_food_diary_data"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:nestedScrollingEnabled="false"
+                    android:id="@+id/rcv_nested_view"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#96D3C8"
+                        android:layout_gravity="bottom"
+                        android:gravity="left|center"
+                        android:id="@+id/txt_add_food"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/opensanssemibold"
+                        android:layout_marginLeft="20dp"
+                        android:text="+ADD MORE"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:textColor="#96D3C8"
+                        android:textSize="20dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center|right"
+                        android:gravity="center|right"
+                        android:fontFamily="@font/opensanssemibold"
+                        android:layout_marginLeft="20dp"
+                        android:text="..."/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</FrameLayout>

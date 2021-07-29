@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".All.Fragment.FoodDiaryNutritionView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rltop"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <ImageView
+                android:id="@+id/ivback"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/bac" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/opensansbold"
+                android:text="Food Diary"
+                android:textColor="@color/edittext"
+                android:textSize="13dp" />
+
+
+            <ImageView
+                android:id="@+id/ivNotification"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/notification1" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+<!--                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_marginTop="30dp">
+
+                    <com.hedyhidoury.calendar.horizontallibrary.HorizontalCalendarView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:id="@+id/horizontal_date_day"
+                        app:selectedBgColor="@color/pink"
+                        app:todaysDateBgColor="@color/yellow"
+                        app:daysTextSize="14dp"
+                        app:weekTextColor="@color/green"
+                        app:weekBackgroundColor="@color/green"
+                        app:todaysDateTextColor="@color/colorblack"
+                        app:calendarBgColor="@android:color/white"
+                        app:daysTextColor="@android:color/black"
+                        app:weekPreviousIcon="@color/white"
+                        app:weekForwardIcon="@color/white"
+                        app:headerForwardIcon="@color/white"
+                        app:headerPreviousIcon="@color/white"
+
+                    />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensanssemibold"
+                        android:textSize="20dp"
+                        android:id="@+id/txt_show_date"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        android:textColor="@color/colorblack"
+                        android:text="Tuesday 02nd February"/>
+
+                </RelativeLayout>-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensanssemibold"
+                    android:textSize="20dp"
+                    android:id="@+id/txt_show_date"
+                    android:textColor="@color/colorblack"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Tuesday 02nd February"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/rcv_date_day_viewer"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/grey" />
+
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Today you have"
+                    android:textSize="20dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/opensanssemibold"
+                    android:textColor="@color/colorblack"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="consumed"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/opensanssemibold"
+                        android:textColor="@color/colorblack"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="500 cal"
+                        android:layout_marginLeft="6dp"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/opensansbold"
+                        android:textColor="@color/green"/>
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="240dp">
+
+
+
+                        <ProgressBar
+                            android:id="@+id/progress_bar_protein"
+                            style="@style/CircularDeterminateProgressBar"
+                            android:layout_width="240dp"
+                            android:layout_height="240dp"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:progress="80" />
+
+
+
+
+                        <ProgressBar
+                            android:id="@+id/progress_bar_fat"
+                            style="@style/CircularDeterminateProgressBar3"
+                            android:layout_width="195dp"
+                            android:layout_height="195dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:progress="70" />
+
+                        <ProgressBar
+                            android:id="@+id/progress_bar_carbs"
+                            style="@style/CircularDeterminateProgressBar2"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:progress="60" />
+
+
+                        <ProgressBar
+                            android:id="@+id/progress_bar_fiber"
+                            style="@style/CircularDeterminateProgressBar1"
+                            android:layout_width="107dp"
+                            android:layout_height="107dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:progress="50" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="40%"
+                            android:textColor="@color/colorblack"
+                            android:fontFamily="@font/opensansbold"
+                            android:textSize="22dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="of daily goals"
+                            android:textSize="8dp"
+                            android:textColor="@color/colorblack"
+                            android:fontFamily="@font/opensansbold"/>
+                        
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <TableLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:stretchColumns="4">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:textColor="#000"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/opensanssemibold"
+                            android:textColor="#000"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="GOAL"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/opensanssemibold"
+                            android:textColor="#000"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="LEFT"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/opensanssemibold"
+                            android:textColor="#000"
+                            android:textSize="12dp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="2"
+                            android:layout_marginLeft="20dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/squarefillgreen"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000"
+                                android:text="Protein"
+                                android:textSize="12dp" />
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="126"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/opensanssemibold"
+                            android:textColor="#000"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="140"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/opensanssemibold"
+                            android:textColor="#000"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="14"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/opensanssemibold"
+                            android:textColor="#000"
+                            android:textSize="12dp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="2"
+                            android:layout_marginLeft="20dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/squarefillyello"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000"
+                                android:text="Fat"
+                                android:textSize="12dp" />
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="43"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/opensanssemibold"
+                            android:textColor="#000"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="48"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/opensanssemibold"
+                            android:textColor="#000"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="5"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/opensanssemibold"
+                            android:textColor="#000"
+                            android:textSize="12dp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="2"
+                            android:layout_marginLeft="20dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/squarefillpink"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000"
+                                android:text="Carbs"
+                                android:textSize="12dp" />
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="150"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/opensanssemibold"
+                            android:textColor="#000"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="210"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/opensanssemibold"
+                            android:textColor="#000"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="60"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/opensanssemibold"
+                            android:textColor="#000"
+                            android:textSize="12dp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="2"
+                            android:layout_marginLeft="20dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/squarefillgrey"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000"
+                                android:text="Fiber"
+                                android:textSize="12dp" />
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/opensanssemibold"
+                            android:textColor="#000"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="20"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/opensanssemibold"
+                            android:textColor="#000"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/opensanssemibold"
+                            android:textColor="#000"
+                            android:textSize="12dp" />
+
+
+                    </TableRow>
+                </TableLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

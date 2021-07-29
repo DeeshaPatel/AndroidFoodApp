@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:elevation="0dp"
+        app:cardElevation="0dp"
+        android:background="@color/grey"
+        app:cardBackgroundColor="#ffffff"
+        android:id="@+id/add_meals"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Meal 1"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/opensanssemibold"
+                android:layout_marginRight="20dp"
+                android:textColor="#888888"
+                android:textSize="14dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/imported_meal_name"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="40dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Meal 1"
+                            android:textColor="@color/colorblack"
+                            android:textSize="14dp"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/imported_ing"
+                            android:fontFamily="@font/opensanssemibold"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginTop="5dp"
+                                app:cardCornerRadius="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="70dp"
+                                    android:id="@+id/image_view_food_photo"
+                                    android:scaleType="fitXY"
+                                    />
+
+
+                            </androidx.cardview.widget.CardView>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Calories"
+                                        android:layout_weight="1"
+                                        android:textColor="#A6A6A6"
+                                        android:textSize="12dp"
+                                        android:fontFamily="@font/opensanssemibold"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Fat"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_weight="1"
+                                        android:textColor="#A6A6A6"
+                                        android:textSize="12dp"
+                                        android:fontFamily="@font/opensanssemibold"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Protein"
+                                        android:layout_weight="1"
+                                        android:textColor="#A6A6A6"
+                                        android:textSize="12dp"
+                                        android:fontFamily="@font/opensanssemibold"
+                                        />
+
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Carbs"
+                                        android:layout_weight="1"
+                                        android:textColor="#A6A6A6"
+                                        android:textSize="12dp"
+                                        android:id="@+id/ind"
+                                        android:fontFamily="@font/opensanssemibold"
+                                        />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="1700"
+                                        android:textSize="12dp"
+                                        android:layout_weight="1"
+                                        android:id="@+id/import_calories_data"
+                                        android:textColor="#A6A6A6"
+                                        android:fontFamily="@font/opensanssemibold"
+                                        />
+
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="1700"
+                                        android:textSize="12dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_weight="1"
+                                        android:id="@+id/import_fat_data"
+                                        android:textColor="#A6A6A6"
+                                        android:fontFamily="@font/opensanssemibold"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="150"
+                                        android:textSize="12dp"
+                                        android:layout_weight="1"
+                                        android:id="@+id/import_protein_data"
+                                        android:textColor="#A6A6A6"
+                                        android:fontFamily="@font/opensanssemibold"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="1700"
+                                        android:textSize="12dp"
+                                        android:layout_weight="1"
+                                        android:id="@+id/import_carbs_data"
+                                        android:textColor="#A6A6A6"
+                                        android:fontFamily="@font/opensanssemibold"
+                                        />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="20dp"
+                        android:layout_gravity="center|right"
+                        android:gravity="center|right"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/add"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center|right"
+            android:gravity="center|right"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/add"/>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>

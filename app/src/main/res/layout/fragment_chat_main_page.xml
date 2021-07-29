@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".All.Fragment.ChatMainPageFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/back"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:id="@+id/personal_details_back_button"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                android:text="Chat"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/notification"
+                android:layout_weight="1"
+                android:id="@+id/personal_details_notification"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:elevation="12dp"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/view2_search"
+                        android:layout_gravity="center"
+                        app:cardBackgroundColor="@color/green"
+                        android:background="@color/white"
+                        app:cardCornerRadius="250dp"
+                        android:shape="ring"
+                        android:thicknessRatio="6">
+                        <ImageView
+                            android:layout_height="60dp"
+                            android:layout_width="60dp"
+                            android:id="@+id/imageView_search"
+                            android:padding="17dp"
+                            android:background="@color/green"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/search_white"
+                            android:layout_gravity="center"
+                            android:layout_centerHorizontal="true">
+                        </ImageView>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="87dp"
+                        android:nestedScrollingEnabled="false"
+                    android:id="@+id/rcv_top_list_chat"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/two_side_rounded_rectangle"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:background="@color/white"
+                        android:id="@+id/rcv_chat_list_of_people"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
