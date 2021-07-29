@@ -1,6 +1,7 @@
 package com.example.foodapp.All.Adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodapp.All.Database.Service.RecipeCategorySubDataModel;
@@ -26,6 +28,8 @@ public class RecipeCategoryAdapter extends RecyclerView.Adapter<RecipeCategoryAd
 
     Context context;
     ArrayList<RecipeCategorySubDataModel> recipeModels;
+    private int selectedPosition = 0;
+
 
     public RecipeCategoryAdapter(Context context, ArrayList<RecipeCategorySubDataModel> recipeModels)
     {
@@ -41,7 +45,7 @@ public class RecipeCategoryAdapter extends RecyclerView.Adapter<RecipeCategoryAd
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecipeCategoryAdapter.ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final RecipeCategoryAdapter.ViewHolder holder, final int position) {
 
         holder.mealname.setText(recipeModels.get(position).getName());
 
@@ -56,15 +60,32 @@ public class RecipeCategoryAdapter extends RecyclerView.Adapter<RecipeCategoryAd
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
+        if (selectedPosition == position) {
+            holder.card.setBackgroundColor(context.getResources().getColor(R.color.yellow));
+            holder.card.setSelected(true);
+            Log.d("aaaaaa","Aaaaaaaaaaa");
+        }
+        else {
+            holder.card.setBackgroundColor(context.getResources().getColor(R.color.tab_color));
+            holder.card.setSelected(false);
+            Log.d("bbbbbbbbb","Bbbbb");
+        }
 
-        holder.r_view.setOnClickListener(new View.OnClickListener() {
+        holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (selectedPosition>=0)
+                {
+                    notifyItemChanged(selectedPosition);
+                }
+                selectedPosition = holder.getAdapterPosition();
+                notifyItemChanged(selectedPosition);
                 RecipeFragment.dataModels.clear();
                 RecipeFragment.pageno=1;
                 RecipeFragment.searchName = recipeModels.get(position).getName();
                 RecipeFragment.Id = recipeModels.get(position).getId();
                 RecipeFragment.getRecipeData(recipeModels.get(position).getName(),recipeModels.get(position).getId());
+
             }
         });
 
@@ -79,14 +100,23 @@ public class RecipeCategoryAdapter extends RecyclerView.Adapter<RecipeCategoryAd
 
         ImageView image;
         TextView mealname;
+        LinearLayout card;
         LinearLayout r_view;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            card = itemView.findViewById(R.id.card_view_category);
             image = (ImageView)itemView.findViewById(R.id.imageview_category_image);
             mealname = (TextView)itemView.findViewById(R.id.txt_recipe_category_name);
             r_view = (LinearLayout)itemView.findViewById(R.id.linearlayout_cateogries);
+
+            card.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    notifyDataSetChanged();
+                }
+            });
 
         }
     }

@@ -50,10 +50,10 @@ public class LibraryArticalPage extends Fragment {
         libraryArticleModels.add(new LibraryArticleModel("1/2 cup fresh lemon juice"));
         libraryArticleModels.add(new LibraryArticleModel("1/2 cup fresh otange juice"));
 
-        LibraryArticleAdapter foodDiaryMealaAdapter = new LibraryArticleAdapter(getContext(),libraryArticleModels);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(linearLayoutManager);
-        recyclerView.setAdapter(foodDiaryMealaAdapter);
+        //LibraryArticleAdapter foodDiaryMealaAdapter = new LibraryArticleAdapter(getContext(),libraryArticleModels);
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+//        recyclerView.setLayoutManager(linearLayoutManager);
+//        recyclerView.setAdapter(foodDiaryMealaAdapter);
 
         return view;
     }

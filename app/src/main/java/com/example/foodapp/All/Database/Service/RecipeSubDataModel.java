@@ -15,6 +15,9 @@ public class RecipeSubDataModel {
     @SerializedName("Notes")
     String notes;
 
+    @SerializedName("Procedure")
+    String Procedure;
+
     @SerializedName("TotalCarb")
     String TotalCarb;
 
@@ -92,5 +95,13 @@ public class RecipeSubDataModel {
 
     public void setIngredient(ArrayList<RecipeDataDescriptionModel> ingredient) {
         Ingredient = ingredient;
+    }
+
+    public String getProcedure() {
+        return Procedure;
+    }
+
+    public void setProcedure(String procedure) {
+        Procedure = procedure;
     }
 }

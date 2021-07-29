@@ -74,7 +74,9 @@
                             android:background="@drawable/oveltextpink1"
                             android:fontFamily="@font/opensanssemibold"
                             android:gravity="center"
-                            android:padding="20dp"
+                            android:padding="15dp"
+                            android:textSize="12dp"
+                            android:id="@+id/recipe_details_protein"
                             android:text="140"
                             android:textColor="#E6A1A1" />
 
@@ -103,7 +105,9 @@
                             android:background="@drawable/oveltextpink2"
                             android:fontFamily="@font/opensanssemibold"
                             android:gravity="center"
-                            android:padding="20dp"
+                            android:padding="15dp"
+                            android:textSize="12dp"
+                            android:id="@+id/recipe_details_fats"
                             android:text="50"
                             android:textColor="#FCC4D9" />
 
@@ -132,7 +136,9 @@
                             android:background="@drawable/oveltextyello"
                             android:fontFamily="@font/opensanssemibold"
                             android:gravity="center"
-                            android:padding="20dp"
+                            android:padding="15dp"
+                            android:textSize="12dp"
+                            android:id="@+id/recipe_details_carbs"
                             android:text="180"
                             android:textColor="#FAE184" />
 
@@ -160,7 +166,9 @@
                             android:background="@drawable/oveltextgreen"
                             android:fontFamily="@font/opensanssemibold"
                             android:gravity="center"
-                            android:padding="20dp"
+                            android:padding="15dp"
+                            android:textSize="12dp"
+                            android:id="@+id/recipe_details_fiber"
                             android:text="22"
                             android:textColor="#A2E4D8" />
 
@@ -226,10 +234,13 @@
                         android:fontFamily="@font/opensansbold"
                         android:text="Method"/>
 
-                    <androidx.recyclerview.widget.RecyclerView
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:nestedScrollingEnabled="false"
+                        android:textColor="@color/colorblack"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/opensansregular"
                         android:id="@+id/rcv_library_article_method"/>
 
                 </LinearLayout>

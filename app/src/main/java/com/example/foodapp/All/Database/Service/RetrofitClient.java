@@ -9,7 +9,7 @@ public class RetrofitClient {
 
     public static Retrofit getClient() {
         if (retrofit==null) {
-            String baseUrl = "http://mymeal.rapidlogistic.in/";
+            String baseUrl = "https://api.mymealsolution.com/";
             retrofit = new Retrofit.Builder()
                     .baseUrl(baseUrl)
                     .addConverterFactory(GsonConverterFactory.create())

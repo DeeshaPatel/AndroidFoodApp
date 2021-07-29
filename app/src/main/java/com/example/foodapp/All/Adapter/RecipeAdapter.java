@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodapp.All.Database.Service.RecipeDataModel;
@@ -47,11 +48,11 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecipeAdapter.ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final RecipeAdapter.ViewHolder holder, final int position) {
 
         holder.mealname.setText(recipeModels.get(position).getRecipeName());
 
-        Picasso.get().load(recipeModels.get(position).getImagePath()).placeholder(context.getResources().getDrawable(R.drawable.photo)).into(holder.image);
+        Picasso.get().load(recipeModels.get(position).getImagePath()).into(holder.image);
 
 //        try {
 //            URL url = new URL(recipeModels.get(position).getImagePath());
@@ -67,7 +68,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
             @Override
             public void onClick(View v) {
                 AppCompatActivity activity = (AppCompatActivity) v.getContext();
-                RecipeViewDetailsFragment myFragment = new RecipeViewDetailsFragment(recipeModels.get(position).getIngredient(),recipeModels.get(position).getNotes(),recipeModels.get(position).getTotalCarb(),recipeModels.get(position).getTotalFat(),recipeModels.get(position).getTotalFiber(),recipeModels.get(position).getTotalProtein());
+                RecipeViewDetailsFragment myFragment = new RecipeViewDetailsFragment(recipeModels.get(position).getIngredient(),recipeModels.get(position).getNotes(),recipeModels.get(position).getTotalCarb(),recipeModels.get(position).getTotalFat(),recipeModels.get(position).getTotalFiber(),recipeModels.get(position).getTotalProtein(),recipeModels.get(position).getProcedure(),recipeModels.get(position).getImagePath());
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, myFragment).addToBackStack(null).commit();
             }
         });
@@ -84,6 +85,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
         ImageView image;
         TextView mealname,cal;
         RelativeLayout r_view;
+        CardView card_view_recipe;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -91,6 +93,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
             image = (ImageView)itemView.findViewById(R.id.img_view_recipe);
             mealname = (TextView)itemView.findViewById(R.id.recipe_meal_name);
             cal = (TextView)itemView.findViewById(R.id.recipe_meal_cal);
+            card_view_recipe = itemView.findViewById(R.id.card_view_recipe);
             r_view = (RelativeLayout) itemView.findViewById(R.id.rl_view_recipe);
 
         }
