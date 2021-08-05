@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.example.foodapp.All.Adapter.LibraryArticleAdapter;
 import com.example.foodapp.All.Models.LibraryArticleModel;
 import com.example.foodapp.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -22,8 +23,17 @@ public class LibraryArticalPage extends Fragment {
 
     ImageView imageView;
     TextView des;
+    TextView name,body;
+    String s_name,s_body,s_image;
     RecyclerView recyclerView;
     ArrayList<LibraryArticleModel> libraryArticleModels;
+
+    public LibraryArticalPage(String name,String body,String image)
+    {
+        s_body = body;
+        s_name = name;
+        s_image = image;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,6 +44,14 @@ public class LibraryArticalPage extends Fragment {
         imageView = (ImageView)view.findViewById(R.id.img_library_article);
         des = (TextView)view.findViewById(R.id.library_article_description);
         recyclerView = (RecyclerView)view.findViewById(R.id.rcv_library_article_ingredients);
+
+        name = view.findViewById(R.id.library_artical_page_description_name);
+        body = view.findViewById(R.id.library_artical_page_description_body);
+        Picasso.get().load(s_image).into(imageView);
+
+        name.setText(s_name);
+        body.setText(s_body);
+
 
         imageView.setImageResource(R.drawable.splash3);
 

@@ -29,5 +29,22 @@ public interface UserClient {
     @GET("/api/Category/GetCategories")
     Call<RecipeCategoryDataModel> getRecipeCategories(@Header("Authorization") String auth);
 
+    @GET("/api/Recipe/GetRecipe")
+    Call<RecipeSearchByNameModel> getSearchData(@Query("Search") String search, @Query("PageNo") int pageno, @Query("PageSize") int pagesize, @Header("Authorization") String auth);
+
+    @GET("/api/Recipe/GetRecipesById")
+    Call<RecipeSearchDataModel> getSearchDescriptionData(@Query("Id") String Id, @Header("Authorization") String auth);
+
+    @GET("/api/Chekin/GetCheckinList")
+    Call<GetCheckInListMainModel> getCheckInList(@Header("Authorization") String auth);
+
+    @GET("api/BlogCategories/GetBlogCategory")
+    Call<GetBlogCategoryMainModel> getBlogCategory(@Header("Authorization") String auth);
+
+    @GET("/api/BlogCategories/GetBlogbyCategoryId")
+    Call<GetBlogDataMainModel> getBlogbyCategoryId(@Query("Id") int id, @Header("Authorization") String auth);
+
+    @GET("/api/Slider/GetSliderImages")
+    Call<GetSliderImageMainModel> getSliderImage(@Header("Authorization") String auth);
 }
 

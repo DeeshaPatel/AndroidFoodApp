@@ -100,6 +100,14 @@ public class MealPlanFragment extends Fragment {
             public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
                 if (scrollY == v.getChildAt(0).getMeasuredHeight() - v.getMeasuredHeight())
                 {
+
+                    LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+                    calender.setLayoutManager(linearLayoutManager1);
+                    data1 = getDatesBetween("01/01/2021","01/01/2023");
+                    final CustomCalendar_WithourDisplay_Two customCalendar = new CustomCalendar_WithourDisplay_Two(getContext(),data1);
+                    calender.setAdapter(customCalendar);
+                    calender.scrollToPosition(current_date_position);
+
                     pageno++;
                     Log.d("GGGGG","Yes");
                     progress_bar_load_new_item.setVisibility(View.VISIBLE);
@@ -272,5 +280,4 @@ public class MealPlanFragment extends Fragment {
         progressDialog.show();
 
     }
-
 }

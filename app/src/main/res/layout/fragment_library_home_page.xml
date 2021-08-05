@@ -47,7 +47,7 @@
 
         </RelativeLayout>
 
-        <ScrollView
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -76,95 +76,12 @@
                         android:layout_alignParentBottom="true"
                         android:orientation="horizontal">
 
-                        <LinearLayout
+                        <androidx.recyclerview.widget.RecyclerView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginRight="20dp"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Nutrition"
-                                android:layout_weight="1"
-                                android:textSize="14dp"
-                                android:id="@+id/library_home_nutrition"
-                                android:textColorLink="@color/yellow"
-                                android:fontFamily="@font/opensansbold"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:textColor="#ffffff"/>
-
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginBottom="15dp"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginLeft="5dp"
-                                android:layout_marginRight="5dp"
-                                android:background="#ffffff" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Fitness"
-                                android:textColorLink="@color/yellow"
-                                android:layout_weight="1"
-                                android:textSize="14dp"
-                                android:id="@+id/library_home_fitness"
-                                android:fontFamily="@font/opensansbold"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:textColor="#ffffff"/>
-
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginBottom="15dp"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginLeft="5dp"
-                                android:layout_marginRight="5dp"
-                                android:background="#ffffff" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Health"
-                                android:textSize="14dp"
-                                android:layout_weight="1"
-                                android:id="@+id/library_home_health"
-                                android:textColorLink="@color/yellow"
-                                android:fontFamily="@font/opensansbold"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:textColor="#ffffff"/>
-
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginBottom="15dp"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginLeft="5dp"
-                                android:layout_marginRight="5dp"
-                                android:background="#ffffff" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Food"
-                                android:layout_weight="1"
-                                android:textSize="14dp"
-                                android:id="@+id/library_home_food"
-                                android:textColorLink="@color/yellow"
-                                android:fontFamily="@font/opensansbold"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:textColor="#ffffff"/>
-
-                        </LinearLayout>
-
-
+                            android:layout_gravity="center"
+                            android:background="#CC000000"
+                            android:id="@+id/recycler_view_library_heaeding"/>
 
 
                     </LinearLayout>
@@ -197,18 +114,32 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <androidx.recyclerview.widget.RecyclerView
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rcv_library_main_page"
-                    android:nestedScrollingEnabled="false"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginBottom="20dp"/>
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/rcv_library_main_page"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="20dp"/>
+
+                    <ProgressBar
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/progress_bar_library_home"
+                        android:visibility="gone"
+                        />
+
+                </RelativeLayout>
+
+
 
             </LinearLayout>
 
-        </ScrollView>
+        </androidx.core.widget.NestedScrollView>
 
 
 

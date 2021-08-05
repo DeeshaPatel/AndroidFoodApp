@@ -118,7 +118,7 @@
             android:fontFamily="@font/opensansbold"
             android:gravity="center"
             android:id="@+id/txt_meal_plan_total_calories"
-            android:text="1950 cal"
+            android:text="0 cal"
             android:textColor="@color/colorblack"
             android:textSize="20dp" />
 
@@ -145,10 +145,10 @@
                     android:background="@drawable/oveltextpink1"
                     android:fontFamily="@font/opensanssemibold"
                     android:gravity="center"
-                    android:padding="20dp"
+                    android:padding="15dp"
                     android:textSize="12dp"
                     android:id="@+id/txt_meal_plan_total_protein"
-                    android:text="140"
+                    android:text="0"
                     android:textColor="#E6A1A1" />
 
                 <TextView
@@ -178,9 +178,9 @@
                     android:fontFamily="@font/opensanssemibold"
                     android:gravity="center"
                     android:id="@+id/txt_meal_plan_total_fat"
-                    android:padding="20dp"
+                    android:padding="15dp"
                     android:textSize="12dp"
-                    android:text="50"
+                    android:text="0"
                     android:textColor="#FCC4D9" />
 
                 <TextView
@@ -210,9 +210,9 @@
                     android:fontFamily="@font/opensanssemibold"
                     android:gravity="center"
                     android:id="@+id/txt_meal_plan_total_carb"
-                    android:padding="20dp"
+                    android:padding="15dp"
                     android:textSize="12dp"
-                    android:text="180"
+                    android:text="0"
                     android:textColor="#FAE184" />
 
                 <TextView
@@ -241,9 +241,9 @@
                     android:fontFamily="@font/opensanssemibold"
                     android:gravity="center"
                     android:id="@+id/txt_meal_plan_total_fibre"
-                    android:padding="20dp"
+                    android:padding="15dp"
                     android:textSize="12dp"
-                    android:text="22"
+                    android:text="0"
                     android:textColor="#A2E4D8" />
 
                 <TextView

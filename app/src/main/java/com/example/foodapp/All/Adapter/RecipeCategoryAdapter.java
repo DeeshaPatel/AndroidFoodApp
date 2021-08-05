@@ -26,9 +26,10 @@ import java.util.ArrayList;
 
 public class RecipeCategoryAdapter extends RecyclerView.Adapter<RecipeCategoryAdapter.ViewHolder>{
 
-    Context context;
+    static Context context;
     ArrayList<RecipeCategorySubDataModel> recipeModels;
-    private int selectedPosition = 0;
+    public static int checkedPosition = 0;
+    public static String id = "73505ebb-bd2f-4cdc-bb2d-8bd52a2db7d7";
 
 
     public RecipeCategoryAdapter(Context context, ArrayList<RecipeCategorySubDataModel> recipeModels)
@@ -47,39 +48,16 @@ public class RecipeCategoryAdapter extends RecyclerView.Adapter<RecipeCategoryAd
     @Override
     public void onBindViewHolder(@NonNull final RecipeCategoryAdapter.ViewHolder holder, final int position) {
 
-        holder.mealname.setText(recipeModels.get(position).getName());
-
-        Picasso.get().load(recipeModels.get(position).getCategoryImage()).into(holder.image);
-
-//        try {
-//            URL url = new URL(recipeModels.get(position).getImagePath());
-//            Bitmap image = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-//            holder.image.setImageBitmap(image);
-//        } catch (MalformedURLException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-        if (selectedPosition == position) {
-            holder.card.setBackgroundColor(context.getResources().getColor(R.color.yellow));
-            holder.card.setSelected(true);
-            Log.d("aaaaaa","Aaaaaaaaaaa");
-        }
-        else {
-            holder.card.setBackgroundColor(context.getResources().getColor(R.color.tab_color));
-            holder.card.setSelected(false);
-            Log.d("bbbbbbbbb","Bbbbb");
-        }
+        holder.sett(recipeModels.get(position));
 
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (selectedPosition>=0)
-                {
-                    notifyItemChanged(selectedPosition);
-                }
-                selectedPosition = holder.getAdapterPosition();
-                notifyItemChanged(selectedPosition);
+                id = recipeModels.get(position).getId();
+
+                checkedPosition = holder.getAdapterPosition();
+                notifyDataSetChanged();
+
                 RecipeFragment.dataModels.clear();
                 RecipeFragment.pageno=1;
                 RecipeFragment.searchName = recipeModels.get(position).getName();
@@ -100,8 +78,9 @@ public class RecipeCategoryAdapter extends RecyclerView.Adapter<RecipeCategoryAd
 
         ImageView image;
         TextView mealname;
-        LinearLayout card;
+        public LinearLayout card;
         LinearLayout r_view;
+        boolean isSelected;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -111,15 +90,24 @@ public class RecipeCategoryAdapter extends RecyclerView.Adapter<RecipeCategoryAd
             mealname = (TextView)itemView.findViewById(R.id.txt_recipe_category_name);
             r_view = (LinearLayout)itemView.findViewById(R.id.linearlayout_cateogries);
 
-            card.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    notifyDataSetChanged();
-                }
-            });
+        }
+        private void sett(RecipeCategorySubDataModel model)
+        {
+            if(checkedPosition == getAdapterPosition()) {
+                card.setBackgroundColor(context.getResources().getColor(R.color.yellow));
+                isSelected = true;
+                id = model.getId();
+            }
+            else {
+                card.setBackgroundColor(context.getResources().getColor(R.color.tab_color));
+                isSelected = false;
+            }
+
+            mealname.setText(model.getName());
+
+            Picasso.get().load(model.getCategoryImage()).into(image);
 
         }
+
     }
-
-
 }

@@ -56,6 +56,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/opensansbold"
                     android:textColor="@color/colorblack"
+                    android:id="@+id/library_artical_page_description_name"
                     android:textSize="22dp"
                     android:text="Article"/>
 
@@ -63,6 +64,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="16dp"
+                    android:id="@+id/library_artical_page_description_body"
                     android:textColor="@color/colorblack"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/opensansbold"
@@ -84,7 +86,7 @@
                     android:textColor="@color/colorblack"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/opensansbold"
-                    android:text="Ingredients"/>
+                    android:text=""/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"

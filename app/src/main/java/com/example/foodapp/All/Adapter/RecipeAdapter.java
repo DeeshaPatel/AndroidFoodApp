@@ -54,6 +54,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
 
         Picasso.get().load(recipeModels.get(position).getImagePath()).into(holder.image);
 
+
 //        try {
 //            URL url = new URL(recipeModels.get(position).getImagePath());
 //            Bitmap image = BitmapFactory.decodeStream(url.openConnection().getInputStream());
@@ -67,9 +68,10 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
         holder.r_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 AppCompatActivity activity = (AppCompatActivity) v.getContext();
                 RecipeViewDetailsFragment myFragment = new RecipeViewDetailsFragment(recipeModels.get(position).getIngredient(),recipeModels.get(position).getNotes(),recipeModels.get(position).getTotalCarb(),recipeModels.get(position).getTotalFat(),recipeModels.get(position).getTotalFiber(),recipeModels.get(position).getTotalProtein(),recipeModels.get(position).getProcedure(),recipeModels.get(position).getImagePath());
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, myFragment).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.framelayout, myFragment).commit();
             }
         });
 
@@ -98,6 +100,4 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
 
         }
     }
-
-
 }

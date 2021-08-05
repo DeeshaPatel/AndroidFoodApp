@@ -6,25 +6,28 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.foodapp.All.Database.Service.GetBlogDataMainDataModel;
 import com.example.foodapp.All.Fragment.HomeFragment;
 import com.example.foodapp.All.Fragment.LibraryArticalPage;
 import com.example.foodapp.All.Models.LibraryMainPageModel;
 import com.example.foodapp.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
 public class LibraryMainPageAdapter extends RecyclerView.Adapter<LibraryMainPageAdapter.ViewHolder>{
 
     Context context;
-    ArrayList<LibraryMainPageModel> models;
+    ArrayList<GetBlogDataMainDataModel> models;
 
-    public LibraryMainPageAdapter(Context context, ArrayList<LibraryMainPageModel> models)
+    public LibraryMainPageAdapter(Context context, ArrayList<GetBlogDataMainDataModel> models)
     {
         this.context = context;
         this.models = models;
@@ -40,15 +43,15 @@ public class LibraryMainPageAdapter extends RecyclerView.Adapter<LibraryMainPage
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        LibraryMainPageModel libraryMainPageModel = models.get(position);
-        holder.name.setText(libraryMainPageModel.getName());
-        holder.image.setImageResource(libraryMainPageModel.getId());
+        final GetBlogDataMainDataModel libraryMainPageModel = models.get(position);
+        holder.name.setText(libraryMainPageModel.getTitle());
+        Picasso.get().load(libraryMainPageModel.getBlogImage()).into(holder.image);
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AppCompatActivity activity = (AppCompatActivity) v.getContext();
-                LibraryArticalPage myFragment = new LibraryArticalPage();
+                LibraryArticalPage myFragment = new LibraryArticalPage(libraryMainPageModel.getBody(),libraryMainPageModel.getTitle(),libraryMainPageModel.getBlogImage());
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, myFragment).addToBackStack(null).commit();
 
             }

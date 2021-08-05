@@ -12,14 +12,15 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.foodapp.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 public class AutoSlidingPager extends PagerAdapter {
 
     Context context;
-    Integer[] image;
-    public AutoSlidingPager(Context activity,Integer[] images)
+    String[] image;
+    public AutoSlidingPager(Context activity,String[] images)
     {
         this.context = activity;
         this.image = images;
@@ -39,7 +40,7 @@ public class AutoSlidingPager extends PagerAdapter {
         //finding id
         ImageView imageView =  viewItem.findViewById(R.id.img_slider);
         //setting data
-        imageView.setImageResource(image[position]);
+        Picasso.get().load(image[position]).into(imageView);
 
         container.addView(viewItem);
 
